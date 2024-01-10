@@ -9,3 +9,7 @@
   width: 30px;
   height: 30px;
 }
+
+.word {
+  letter-spacing: 10px;
+}

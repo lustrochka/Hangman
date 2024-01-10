@@ -1,9 +1,5 @@
-import { Keyboard } from './scripts/keyboard';
+import { Main } from './scripts/main';
 import './style.css';
 
-document.addEventListener('keydown', (event) => {
-  console.log(event.code, event.key);
-});
-
-const keyboard = new Keyboard();
-document.body.appendChild(keyboard.render());
+const main = new Main();
+document.body.appendChild(main.render());

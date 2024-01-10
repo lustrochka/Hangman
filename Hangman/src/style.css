@@ -1,0 +1,11 @@
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 350px;
+}
+
+.key {
+  width: 30px;
+  height: 30px;
+}

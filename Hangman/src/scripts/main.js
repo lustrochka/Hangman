@@ -16,10 +16,8 @@ export class Main {
     return main;
   }
   randomize() {
-    return Math.floor(Math.random() * answers.length);
+    const randomIdx = Math.floor(Math.random() * answers.length);
+    localStorage.setItem('index', randomIdx);
+    return randomIdx;
   }
 }
-
-/*document.addEventListener('keydown', (event) => {
-  console.log(event.code, event.key);
-});*/

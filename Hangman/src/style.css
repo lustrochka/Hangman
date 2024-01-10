@@ -8,8 +8,13 @@
 .key {
   width: 30px;
   height: 30px;
+  margin: 10px;
 }
 
 .word {
   letter-spacing: 10px;
+}
+
+.disabled {
+  color: red;
 }

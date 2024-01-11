@@ -18,7 +18,10 @@ export class Model {
         displayingWord.innerText = `${text.slice(0, position)}${letter}${text.slice(position + 1)}`;
       }
     } else {
-      displayingAttempts.innerText = `Неправильных ответов: ${++this.attempts} / 6`;
+      if (this.attempts < 6) {
+        displayingAttempts.innerText = `Неправильных ответов: ${++this.attempts} / 6`;
+        document.querySelectorAll('.hangman')[this.attempts - 1].classList.add('visible');
+      }
     }
   }
 }

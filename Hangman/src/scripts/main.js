@@ -1,5 +1,6 @@
 import { Keyboard } from './keyboard';
 import { Question } from './question';
+import { Gallows } from './gallows';
 import answers from '../answers.json';
 
 export class Main {
@@ -9,6 +10,9 @@ export class Main {
 
     const question = new Question(this.randomize());
     main.appendChild(question.render());
+
+    const gallows = new Gallows();
+    main.appendChild(gallows.render());
 
     const keyboard = new Keyboard();
     main.appendChild(keyboard.render());

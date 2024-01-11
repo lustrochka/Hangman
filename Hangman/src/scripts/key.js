@@ -6,6 +6,7 @@ export class Key {
     const key = document.createElement('div');
     key.innerText = this.letter;
     key.classList.add('key');
+    key.id = `${this.letter}`;
     return key;
   }
 }

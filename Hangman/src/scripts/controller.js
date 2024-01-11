@@ -23,8 +23,10 @@ export class Controller {
     }
   }
   checkKey(event) {
-    if (LETTERS.includes(event.key.toUpperCase())) {
+    const key = document.getElementById(event.key.toUpperCase());
+    if (LETTERS.includes(event.key.toUpperCase()) && !key.classList.contains('disabled')) {
       this.model.checkLetter(event.key.toUpperCase());
+      key.classList.add('disabled');
     }
   }
 }

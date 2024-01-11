@@ -1,3 +1,8 @@
+.main {
+  background-color: black;
+  color: white;
+}
+
 .keyboard {
   display: flex;
   flex-wrap: wrap;
@@ -17,4 +22,47 @@
 
 .disabled {
   color: red;
+}
+
+.gallows {
+  font-size: 100px;
+}
+
+.hangman {
+  position: absolute;
+  display: none;
+}
+
+.hangman:nth-of-type(1) {
+  top: 410px;
+    left: 410px;
+}
+
+.hangman:nth-of-type(2) {
+  left: 450px;
+    top: 500px;
+}
+
+.hangman:nth-of-type(3) {
+  top: 500px;
+    left: 410px;
+}
+
+.hangman:nth-of-type(4) {
+  top: 500px;
+    left: 485px;
+}
+
+.hangman:nth-of-type(5) {
+  top: 600px;
+    left: 420px;
+}
+
+.hangman:nth-of-type(6) {
+  top: 600px;
+    left: 470px;
+}
+
+.visible {
+  display: block;
 }

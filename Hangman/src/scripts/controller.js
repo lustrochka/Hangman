@@ -1,6 +1,6 @@
 import { Model } from './model';
 
-const LETTERS = 'ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ';
+const LETTERS = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
 
 export class Controller {
   constructor() {
@@ -8,6 +8,7 @@ export class Controller {
   }
   addListeners() {
     const keyboard = document.querySelector('.keyboard');
+    //const button = document.querySelector('.button');
 
     keyboard.addEventListener('click', (event) => {
       this.checkVirtualKey(event);
@@ -15,6 +16,9 @@ export class Controller {
     document.addEventListener('keydown', (event) => {
       this.checkKey(event);
     });
+    /*button.addEventListener('click', () => {
+      this.rerender();
+    });*/
   }
   checkVirtualKey(event) {
     if (event.target.classList.contains('key') && !event.target.classList.contains('disabled')) {

@@ -12,17 +12,25 @@ export class Main {
     const randomIdx = this.randomize();
     localStorage.setItem('index', randomIdx);
 
-    const question = new Question(randomIdx);
-    main.appendChild(question.render());
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('wrapper');
+    main.appendChild(wrapper);
 
     const gallows = new Gallows();
-    main.appendChild(gallows.render());
+    wrapper.appendChild(gallows.render());
+
+    const quizBlock = document.createElement('div');
+    quizBlock.classList.add('quiz-block');
+    wrapper.appendChild(quizBlock);
+
+    const question = new Question(randomIdx);
+    quizBlock.appendChild(question.render());
 
     const keyboard = new Keyboard();
-    main.appendChild(keyboard.render());
+    quizBlock.appendChild(keyboard.render());
 
     const modal = new Modal(answers[randomIdx]['answer']);
-    main.appendChild(modal.render());
+    wrapper.appendChild(modal.render());
 
     return main;
   }

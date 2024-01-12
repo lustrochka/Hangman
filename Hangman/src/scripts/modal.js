@@ -3,8 +3,12 @@ export class Modal {
     this.word = word;
   }
   render() {
+    const background = document.createElement('div');
+    background.classList.add('background');
+
     const modal = document.createElement('div');
     modal.classList.add('modal');
+    background.appendChild(modal);
 
     const message = document.createElement('div');
     message.classList.add('message');
@@ -12,7 +16,7 @@ export class Modal {
 
     const secretWord = document.createElement('div');
     secretWord.classList.add('secret-word');
-    secretWord.innerText = this.word;
+    secretWord.innerText = `Ответ: ${this.word}`;
     modal.appendChild(secretWord);
 
     const button = document.createElement('button');
@@ -20,6 +24,6 @@ export class Modal {
     button.innerText = 'Играть снова';
     modal.appendChild(button);
 
-    return modal;
+    return background;
   }
 }

@@ -7,7 +7,7 @@ export class Model {
   checkLetter(letter) {
     const displayingWord = document.querySelector('.word');
     const displayingAttempts = document.querySelector('.attempts');
-    const modal = document.querySelector('.modal');
+    const modal = document.querySelector('.background');
     const message = document.querySelector('.message');
     const index = localStorage.getItem('index');
     let word = answers[index]['answer'];

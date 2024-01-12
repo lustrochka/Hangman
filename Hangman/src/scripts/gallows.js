@@ -3,7 +3,7 @@ import GallowsSrc from '../assets/viselitsa.svg';
 export class Gallows {
   render() {
     const gallowsBlock = document.createElement('div');
-    gallowsBlock.classList.add('gallows');
+    gallowsBlock.classList.add('gallows-block');
 
     const gallows = document.createElement('img');
     gallows.src = GallowsSrc;

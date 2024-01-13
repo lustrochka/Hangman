@@ -1,7 +1,14 @@
+import { Main } from './main';
 import answers from '../answers.json';
 
 export class Model {
   constructor() {
+    this.attempts = 0;
+    this.main = new Main();
+  }
+  renderView() {
+    document.body.innerHTML = '';
+    document.body.appendChild(this.main.render());
     this.attempts = 0;
   }
   checkLetter(letter) {

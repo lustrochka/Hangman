@@ -8,7 +8,7 @@ export class Controller {
   }
   addListeners() {
     const keyboard = document.querySelector('.keyboard');
-    //const button = document.querySelector('.button');
+    const button = document.querySelector('.button');
 
     keyboard.addEventListener('click', (event) => {
       this.checkVirtualKey(event);
@@ -16,9 +16,9 @@ export class Controller {
     document.addEventListener('keydown', (event) => {
       this.checkKey(event);
     });
-    /*button.addEventListener('click', () => {
+    button.addEventListener('click', () => {
       this.rerender();
-    });*/
+    });
   }
   checkVirtualKey(event) {
     if (event.target.classList.contains('key') && !event.target.classList.contains('disabled')) {
@@ -32,5 +32,9 @@ export class Controller {
       this.model.checkLetter(event.key.toUpperCase());
       key.classList.add('disabled');
     }
+  }
+  rerender() {
+    this.model.renderView();
+    this.addListeners();
   }
 }

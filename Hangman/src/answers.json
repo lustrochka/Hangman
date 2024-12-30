@@ -1,42 +1,42 @@
 [
   {
-    "question": "Искусственное заграждение, выполненное из подручных материалов, применяемое во время восстаний",
-    "answer": "БАРРИКАДА"
+    "question": "An artificial barrier made from improvised materials, used during uprisings",
+    "answer": "BARRICADE"
   },
   {
-    "question": "Публичное сожжение еретиков",
-    "answer": "АУТОДАФЕ"
+    "question": "An official organization in the Roman Catholic Church whose purpose was to find and punish people who opposed its beliefs",
+    "answer": "INQUISITION"
   },
   {
-    "question": "Проведение хирургических операций над живым животным с целью исследования функций организма",
-    "answer": "ВИВИСЕКЦИЯ"
+    "question": "The cutting of or operation on a living animal usually for physiological or pathological investigation.",
+    "answer": "VIVISECTION"
   },
   {
-    "question": "Разновидность рельефа, в котором изображение выступает над плоскостью фона не более, чем на половину своего объёма",
-    "answer": "БАРЕЛЬЕФ"
+    "question": "A strong, regular repeated pattern of movement or sound.",
+    "answer": "RHYTHM"
   },
   {
-    "question": "Непрерывно движущаяся бесконечная лента, служащая средством перемещения обрабатываемых материалов от одного рабочего к другому",
-    "answer": "КОНВЕЙЕР"
+    "question": "A continuous moving strip or surface that is used for transporting objects from one place to another",
+    "answer": "CONVEYOR"
   },
   {
-    "question": "Литературное или музыкальное произведение созданные без подготовки, в момент произнесения, исполнения.",
-    "answer": "ЭКСПРОМТ"
+    "question": "To speak very quietly, using the breath but not the voice",
+    "answer": "WHISPER"
   },
   {
-    "question": "Нетерпимость к кому-либо или чему-либо чужому, незнакомому, непривычному; восприятие чужого как неприятного и опасного",
-    "answer": "КСЕНОФОБИЯ"
+    "question": "A set of mathematical instructions or rules that, especially if given to a computer, will help to calculate an answer to a problem:",
+    "answer": "ALGORITHM"
   },
   {
-    "question": "Заупокойная месса или музыкальное произведение, сочинённое в память об умершем",
-    "answer": "РЕКВИЕМ"
+    "question": "The quality of existing as or representing an idea, a feeling, etc. and not a material object, or something that has this quality",
+    "answer": "ABSTRACTION"
   },
   {
-    "question": "Способность функции обрабатывать данные разных типов",
-    "answer": "ПОЛИМОРФИЗМ"
+    "question": "The ability of different objects to be accessed through the same interface, allowing a single function or method to operate on different types in a unified way",
+    "answer": "POLYMORPHISM"
   },
   {
-    "question": "Свечение веществ, вызванное не нагревом",
-    "answer": "ЛЮМИНЕСЦЕНЦИЯ"
+    "question": "The giving out of light by a substance that has not been heated",
+    "answer": "LUMINESCENCE"
   }
 ]

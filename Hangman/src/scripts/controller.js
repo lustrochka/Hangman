@@ -1,6 +1,6 @@
 import { Model } from './model';
 
-const LETTERS = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
+const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 export class Controller {
   constructor() {

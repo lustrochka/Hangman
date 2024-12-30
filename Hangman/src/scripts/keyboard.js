@@ -1,6 +1,6 @@
 import { Key } from './key';
 
-const LETTERS = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ';
+const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 export class Keyboard {
   render() {

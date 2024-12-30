@@ -28,15 +28,15 @@ export class Model {
       }
       if (!displayingWord.innerText.includes('_')) {
         modal.classList.add('visible');
-        message.innerText = 'Победа!';
+        message.innerText = 'You win!';
       }
     } else {
       if (this.attempts < 6) {
-        displayingAttempts.innerText = `Неправильных ответов: ${++this.attempts} / 6`;
+        displayingAttempts.innerText = `Wrong answers: ${++this.attempts} / 6`;
         document.querySelectorAll('.hangman')[this.attempts - 1].classList.add('visible');
         if (this.attempts === 6) {
           modal.classList.add('visible');
-          message.innerText = 'Игра окончена';
+          message.innerText = 'Game over';
         }
       }
     }

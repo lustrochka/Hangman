@@ -21,7 +21,7 @@ export class Question {
     const attempts = document.createElement('div');
     attempts.classList.add('attempts');
     question.appendChild(attempts);
-    attempts.innerText = 'Неправильных ответов: 0 / 6';
+    attempts.innerText = 'Wrong answers: 0 / 6';
     return question;
   }
 }

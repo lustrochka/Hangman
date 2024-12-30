@@ -16,12 +16,12 @@ export class Modal {
 
     const secretWord = document.createElement('div');
     secretWord.classList.add('secret-word');
-    secretWord.innerText = `Ответ: ${this.word}`;
+    secretWord.innerText = `Answer: ${this.word}`;
     modal.appendChild(secretWord);
 
     const button = document.createElement('button');
     button.classList.add('button');
-    button.innerText = 'Играть снова';
+    button.innerText = 'Play again';
     modal.appendChild(button);
 
     return background;

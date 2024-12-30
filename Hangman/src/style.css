@@ -138,8 +138,6 @@ body {
 }
 
 @media (max-width: 820px) {
-  
-
   .hint {
     font-size: 18px;
   }
@@ -162,7 +160,7 @@ body {
   }
 }
 
-@media (max-width: 650px) and (min-width: 500px){
+@media (max-width: 650px) and (min-width: 500px) {
   .keyboard {
     position: absolute;
     top: 450px;
@@ -198,6 +196,3 @@ body {
     max-width: 100%;
   }
 }
-
-
-

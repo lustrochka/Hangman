@@ -6,39 +6,37 @@ export class Model {
     this.attempts = 0;
     this.main = new Main();
   }
-  renderView() {
-    document.body.innerHTML = '';
-    document.body.appendChild(this.main.render());
+
+  resetAttempts() {
     this.attempts = 0;
   }
+
+  getAttempts() {
+    return this.attempts;
+  }
+
   checkLetter(letter) {
-    const displayingWord = document.querySelector('.word');
-    const displayingAttempts = document.querySelector('.attempts');
-    const modal = document.querySelector('.background');
-    const message = document.querySelector('.message');
     const index = localStorage.getItem('index');
     let word = answers[index]['answer'];
+    const result = { found: false, positions: [], isGameOver: false };
+
     if (word.includes(letter)) {
       let searchIdx = 0;
       while (word.indexOf(letter, searchIdx) !== -1) {
-        const text = displayingWord.innerText;
         const position = word.indexOf(letter, searchIdx);
         searchIdx = position + 1;
-        displayingWord.innerText = `${text.slice(0, position)}${letter}${text.slice(position + 1)}`;
+        result.positions.push(position);
       }
-      if (!displayingWord.innerText.includes('_')) {
-        modal.classList.add('visible');
-        message.innerText = 'You win!';
-      }
+      result.found = true;
     } else {
-      if (this.attempts < 6) {
-        displayingAttempts.innerText = `Wrong answers: ${++this.attempts} / 6`;
-        document.querySelectorAll('.hangman')[this.attempts - 1].classList.add('visible');
-        if (this.attempts === 6) {
-          modal.classList.add('visible');
-          message.innerText = 'Game over';
-        }
-      }
+      this.attempts++;
+      result.isGameOver = this.attempts === 6;
     }
+    return result;
+  }
+
+  checkVictory() {
+    const displayingWord = document.querySelector('.word');
+    return !displayingWord.innerText.includes('_');
   }
 }

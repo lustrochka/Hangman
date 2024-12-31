@@ -30,7 +30,6 @@ export class Controller {
 
   checkVirtualKey(event: MouseEvent) {
     if (event.target instanceof HTMLDivElement) {
-      console.log(event.target);
       if (event.target.classList.contains('key') && !event.target.classList.contains('disabled')) {
         this.manageView(event.target.innerText);
         event.target.classList.add('disabled');

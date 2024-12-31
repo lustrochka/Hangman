@@ -1,10 +1,11 @@
 const path = require('path');
+const { merge } = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const EslintPlugin = require('eslint-webpack-plugin');
 
-module.exports = {
+const baseConfig = {
   mode: 'development',
   entry: {
     main: path.resolve(__dirname, './src/index'),
@@ -48,4 +49,11 @@ module.exports = {
   stats: {
     children: true,
   },
+};
+
+module.exports = ({ mode }) => {
+  const isProductionMode = mode === 'prod';
+  const envConfig = isProductionMode ? require('./webpack.prod.config') : require('./webpack.dev.config');
+
+  return merge(baseConfig, envConfig);
 };

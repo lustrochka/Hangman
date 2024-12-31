@@ -1,7 +1,11 @@
 import { Main } from './main';
 import answers from '../answers.json';
+import { getDOMElement } from '../utils/getDOMElement';
 
 export class Model {
+  attempts: number;
+  main: Main;
+
   constructor() {
     this.attempts = 0;
     this.main = new Main();
@@ -15,10 +19,10 @@ export class Model {
     return this.attempts;
   }
 
-  checkLetter(letter) {
-    const index = localStorage.getItem('index');
+  checkLetter(letter: string) {
+    const index = Number(localStorage.getItem('index'));
     let word = answers[index]['answer'];
-    const result = { found: false, positions: [], isGameOver: false };
+    const result: { found: boolean, positions: number[], isGameOver: boolean } = { found: false, positions: [], isGameOver: false };
 
     if (word.includes(letter)) {
       let searchIdx = 0;
@@ -36,7 +40,7 @@ export class Model {
   }
 
   checkVictory() {
-    const displayingWord = document.querySelector('.word');
+    const displayingWord = getDOMElement<HTMLDivElement>('.word');
     return !displayingWord.innerText.includes('_');
   }
 }

@@ -1,5 +1,7 @@
 export class Modal {
-  constructor(word) {
+  word: string;
+
+  constructor(word: string) {
     this.word = word;
   }
   render() {

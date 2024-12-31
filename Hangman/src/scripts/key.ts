@@ -1,5 +1,7 @@
 export class Key {
-  constructor(letter) {
+  letter: string;
+  
+  constructor(letter: string) {
     this.letter = letter;
   }
   render() {

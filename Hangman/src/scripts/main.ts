@@ -5,9 +5,12 @@ import { Modal } from './modal';
 import answers from '../answers.json';
 
 export class Main {
+  playedWords: number[];
+  randomIdx: number;
+
   constructor() {
     this.playedWords = [];
-    this.randomIdx;
+    this.randomIdx = 0;
   }
   render() {
     this.randomize();
@@ -42,10 +45,9 @@ export class Main {
     let randomIdx = Math.floor(Math.random() * answers.length);
     while (this.playedWords.includes(randomIdx)) {
       randomIdx = Math.floor(Math.random() * answers.length);
-      console.log(randomIdx, this.playedWords);
     }
     this.randomIdx = randomIdx;
     this.playedWords.push(randomIdx);
-    localStorage.setItem('index', randomIdx);
+    localStorage.setItem('index', randomIdx.toString());
   }
 }

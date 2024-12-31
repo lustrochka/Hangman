@@ -7,7 +7,7 @@ const EslintPlugin = require('eslint-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    main: path.resolve(__dirname, './src/index.js'),
+    main: path.resolve(__dirname, './src/index'),
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -26,11 +26,15 @@ module.exports = {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
+      { test: /\.ts$/i, use: 'ts-loader' },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: 'asset/resource',
       },
     ],
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({

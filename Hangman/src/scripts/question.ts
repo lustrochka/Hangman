@@ -1,7 +1,9 @@
 import answers from '../answers.json';
 
 export class Question {
-  constructor(index) {
+  index: number;
+
+  constructor(index: number) {
     this.index = index;
   }
   render() {
